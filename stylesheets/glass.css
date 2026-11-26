@@ -1,0 +1,10 @@
+@import url("./modern.css");
+:root{font-family: 'DM Sans',sans-serif;--bg:#e8f1f7;--surface:#ffffffa8;--text:#172b42;--muted:#60758a;--accent:#267caa;--border:#ffffffb8;--radius:22px;--shadow:0 16px 45px #315b7820}
+body{background:linear-gradient(135deg,#dcecf4,#f1e9f7 55%,#dce8f4);background-attachment:fixed}
+.site-header,.panel,.sample-card{background:#ffffff80;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid #ffffffb8;box-shadow:var(--shadow)}
+.site-header{border-bottom:1px solid #ffffffb8}.hero{background:radial-gradient(circle at 75% 15%,#b9d9edaa,transparent 45%),transparent}
+.button{border-radius:999px}.button-primary{background:linear-gradient(120deg,#398fbd,#7768b8);box-shadow:0 8px 20px #398fbd40}
+.button-secondary{background:#ffffff80;border-color:#ffffffb8}
+.badge{border:1px solid #ffffffb8;background:#d7eaf5;color:#286b91}
+.demo-form input:not([type=checkbox]),.demo-form select,.demo-form textarea{background:#ffffffa8;border:1px solid #ffffff;color:var(--text);border-radius:13px}
+.progress-track{background:#d1e0eb}
