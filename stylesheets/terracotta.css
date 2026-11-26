@@ -1,6 +1,5 @@
 @import url("./modern.css");
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
-
 :root {
   font-family: 'Lora',serif;
   color: #432c24;
@@ -123,4 +122,20 @@ nav a,
   border-top-color: #e8d4c7;
 }
 
-h1,h2,h3,h4{font-family:'Lora',serif} .button{border-radius:4px} .panel{border-bottom:3px solid #e7c6b4} .badge{border-radius:4px;background:#f5dfd2;color:#98472f}
+h1,h2,h3,h4 {
+  font-family:'Lora',serif
+}
+
+.button {
+  border-radius:4px
+}
+
+.panel {
+  border-bottom:3px solid #e7c6b4
+}
+
+.badge {
+  border-radius:4px;
+  background:#f5dfd2;
+  color:#98472f
+}
