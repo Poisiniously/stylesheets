@@ -1,6 +1,5 @@
 @import url("./modern.css");
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-
 :root {
   font-family: 'Manrope',sans-serif;
   color: #183044;
@@ -123,4 +122,14 @@ nav a,
   border-top-color: #d4e7f0;
 }
 
-.site-header{backdrop-filter:blur(14px)} .panel{border-top:3px solid #8ccfe8} .button-primary{color:#fff}
+.site-header {
+  backdrop-filter:blur(14px)
+}
+
+.panel {
+  border-top:3px solid #8ccfe8
+}
+
+.button-primary {
+  color:#fff
+}
