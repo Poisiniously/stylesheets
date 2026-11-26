@@ -1,6 +1,5 @@
 /* Classic Windows Command Prompt appearance */
 @import url("./modern.css");
-
 :root {
   font-family: Consolas, "Lucida Console", monospace;
   color: #c0c0c0;
@@ -430,21 +429,17 @@ button:disabled {
     height: auto;
     flex-wrap: wrap;
   }
-
   .theme-picker {
     margin-left: 0;
   }
-
   nav {
     order: 3;
     width: 100%;
     flex-wrap: wrap;
   }
-
   .hero {
     padding: 18px 10px;
   }
-
   .section {
     padding: 8px 10px 20px;
   }
