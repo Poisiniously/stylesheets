@@ -1,6 +1,5 @@
 @import url("./modern.css");
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
 :root {
   font-family: 'Space Grotesk',sans-serif;
   color: #f4edff;
@@ -123,4 +122,24 @@ nav a,
   border-top-color: #49345f;
 }
 
-.button-primary{color:#1b1230} .button-secondary{background:#2b2040} .badge{background:#3b2a56;color:#d8c2ff} .badge-alt{background:#203b36;color:#a8e3d1} .panel{border-top:2px solid #9b70e8}
+.button-primary {
+  color:#1b1230
+}
+
+.button-secondary {
+  background:#2b2040
+}
+
+.badge {
+  background:#3b2a56;
+  color:#d8c2ff
+}
+
+.badge-alt {
+  background:#203b36;
+  color:#a8e3d1
+}
+
+.panel {
+  border-top:2px solid #9b70e8
+}
