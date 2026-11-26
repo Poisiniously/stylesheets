@@ -1,11 +1,70 @@
 @import url("./modern.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-:root{font-family:Inter, sans-serif;--bg:#f4f7fb;--surface:#fff;--text:#172b4d;--muted:#62748a;--accent:#1769aa;--border:#dce5ef;--radius:9px;--shadow:0 5px 18px #17365d12}
-body{background:var(--bg)}.site-header{background:#fff;box-shadow:0 2px 12px #17365d0c}
-.brand,h1,h2,h3,h4{font-family:Inter,sans-serif;letter-spacing:-.5px}
-.hero{background:linear-gradient(120deg,#e7f1fb,#f7faff 65%,#eaf4f8)}
-.button{border-radius:7px}.button-primary{background:#1769aa}.button-secondary{background:#fff;border-color:#b9cadd;color:#1769aa}
-.panel,.sample-card{box-shadow:0 5px 18px #17365d0c;border-radius:9px}
-.badge{border-radius:5px;background:#e3f0fb;color:#1769aa}.badge-alt{background:#e2f4ec;color:#26734d}
-.demo-form input:not([type=checkbox]),.demo-form select,.demo-form textarea{border-radius:7px;background:#fff}
-.site-footer{background:#fff}
+:root {
+  font-family:Inter, sans-serif;
+  --bg:#f4f7fb;
+  --surface:#fff;
+  --text:#172b4d;
+  --muted:#62748a;
+  --accent:#1769aa;
+  --border:#dce5ef;
+  --radius:9px;
+  --shadow:0 5px 18px #17365d12
+}
+
+body {
+  background:var(--bg)
+}
+
+.site-header {
+  background:#fff;
+  box-shadow:0 2px 12px #17365d0c
+}
+
+.brand,h1,h2,h3,h4 {
+  font-family:Inter,sans-serif;
+  letter-spacing:-.5px
+}
+
+.hero {
+  background:linear-gradient(120deg,#e7f1fb,#f7faff 65%,#eaf4f8)
+}
+
+.button {
+  border-radius:7px
+}
+
+.button-primary {
+  background:#1769aa
+}
+
+.button-secondary {
+  background:#fff;
+  border-color:#b9cadd;
+  color:#1769aa
+}
+
+.panel,.sample-card {
+  box-shadow:0 5px 18px #17365d0c;
+  border-radius:9px
+}
+
+.badge {
+  border-radius:5px;
+  background:#e3f0fb;
+  color:#1769aa
+}
+
+.badge-alt {
+  background:#e2f4ec;
+  color:#26734d
+}
+
+.demo-form input:not([type=checkbox]),.demo-form select,.demo-form textarea {
+  border-radius:7px;
+  background:#fff
+}
+
+.site-footer {
+  background:#fff
+}
