@@ -1,0 +1,13 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap');
+:root{font-family:'Nunito Sans',sans-serif;--bg:#f7f1df;--surface:#fffdf4;--text:#3c3529;--muted:#81745e;--accent:#b65b43;--border:#e6d9b9;--radius:5px;--shadow:2px 4px 12px #6c57301a}
+body{background-color:#f7f1df;background-image:radial-gradient(#d9cba8 0.6px,transparent .6px);background-size:9px 9px}
+.site-header{background:#fffdf4;border-bottom:2px solid #d9cba8}
+.brand,h1,h2,h3,h4{font-family:Kalam,cursive;letter-spacing:0}
+.hero{background:linear-gradient(120deg,#f0e5c8dd,#f7f1dfdd)}
+.panel,.sample-card{background:#fffdf4;border:1px solid #e6d9b9;box-shadow:2px 4px 12px #6c57301a}
+.button{border-radius:5px}.button-primary{background:#b65b43}
+.button-secondary{background:#fffdf4;border-color:#d9cba8;color:#6f4938}
+.badge{border-radius:4px;background:#f3dfc9;color:#9b503d}
+.demo-form input:not([type=checkbox]),.demo-form select,.demo-form textarea{background:#fffdf4;border-color:#d9cba8;border-radius:5px}
+.site-footer{background:#fffdf4}
