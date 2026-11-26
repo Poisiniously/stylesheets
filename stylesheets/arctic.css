@@ -123,13 +123,13 @@ nav a,
 }
 
 .site-header {
-  backdrop-filter:blur(14px)
+  backdrop-filter: blur(14px);
 }
 
 .panel {
-  border-top:3px solid #8ccfe8
+  border-top: 3px solid #8ccfe8;
 }
 
 .button-primary {
-  color:#fff
+  color: #fff;
 }
