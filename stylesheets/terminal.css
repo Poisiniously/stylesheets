@@ -1,0 +1,126 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'IBM Plex Mono',monospace;
+  color: #c8ffd7;
+  background: #07110c;
+  --bg: #07110c;
+  --surface: #0d1b13;
+  --text: #c8ffd7;
+  --muted: #78a989;
+  --accent: #48f28b;
+  --border: #1c5634;
+  --radius: 2px;
+  --shadow: 0 0 24px #48f28b14;
+}
+
+body {
+  background: #07110c;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  background: #0d1b13;
+  border-bottom: 1px solid #1c5634;
+}
+
+.brand span,
+.hero h1 span {
+  color: #48f28b;
+}
+
+nav a,
+.theme-picker {
+  color: #78a989;
+}
+
+.theme-picker select {
+  background: #0d1b13;
+  color: #c8ffd7;
+  border: 1px solid #1c5634;
+  border-radius: 2px;
+}
+
+.hero {
+  background: linear-gradient(135deg,#07110c,#0b2114 70%,#102719);
+}
+
+.eyebrow {
+  color: #48f28b;
+}
+
+.button-primary {
+  background: #48f28b;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.button-secondary {
+  background: #0d1b13;
+  color: var(--text);
+  border-color: #1c5634;
+}
+
+.button-quiet {
+  color: var(--accent);
+}
+
+.panel,
+.sample-card {
+  background: #0d1b13;
+  border-color: #1c5634;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel-intro blockquote {
+  background: #0d1b13;
+  color: var(--text);
+  border-left-color: #48f28b;
+  border-radius: 2px;
+}
+
+.badge {
+  background: #1c5634;
+  color: #48f28b;
+  border-radius: 2px;
+}
+
+.badge-alt {
+  background: #0d1b13;
+  color: #78a989;
+}
+
+.badge-muted {
+  background: #07110c;
+  color: #78a989;
+}
+
+.demo-form input:not([type=checkbox]),
+.demo-form select,
+.demo-form textarea {
+  background: #07110c;
+  color: var(--text);
+  border-color: #1c5634;
+  border-radius: 2px;
+}
+
+.progress-track {
+  background: #1c5634;
+}
+
+.progress-track span {
+  background: #48f28b;
+}
+
+.site-footer {
+  color: #78a989;
+  border-top-color: #1c5634;
+}
+
+h1,h2,h3,h4{font-family:'IBM Plex Mono',monospace;text-transform:uppercase} .button{border-radius:0;text-transform:uppercase;letter-spacing:1px} .button-primary{color:#07110c;box-shadow:0 0 18px #48f28b44} .panel{border-left:2px solid var(--accent)} .badge{border-radius:0;background:#123b22;color:#72ffa5}
