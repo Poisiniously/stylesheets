@@ -1,0 +1,126 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Nunito',sans-serif;
+  color: #45283a;
+  background: #fff5f9;
+  --bg: #fff5f9;
+  --surface: #ffffff;
+  --text: #45283a;
+  --muted: #a17b91;
+  --accent: #e58ab5;
+  --border: #f2dce8;
+  --radius: 26px;
+  --shadow: 0 12px 35px #a94f7d18;
+}
+
+body {
+  background: #fff5f9;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #f2dce8;
+}
+
+.brand span,
+.hero h1 span {
+  color: #e58ab5;
+}
+
+nav a,
+.theme-picker {
+  color: #a17b91;
+}
+
+.theme-picker select {
+  background: #ffffff;
+  color: #45283a;
+  border: 1px solid #f2dce8;
+  border-radius: 26px;
+}
+
+.hero {
+  background: radial-gradient(circle at 85% 15%,#f9d6e7 0,transparent 45%),#fff5f9;
+}
+
+.eyebrow {
+  color: #e58ab5;
+}
+
+.button-primary {
+  background: linear-gradient(135deg,#e58ab5,#d86f9f);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.button-secondary {
+  background: #ffffff;
+  color: var(--text);
+  border-color: #f2dce8;
+}
+
+.button-quiet {
+  color: var(--accent);
+}
+
+.panel,
+.sample-card {
+  background: #fff;
+  border-color: #f2dce8;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel-intro blockquote {
+  background: #ffffff;
+  color: var(--text);
+  border-left-color: #e58ab5;
+  border-radius: 26px;
+}
+
+.badge {
+  background: #f2dce8;
+  color: #e58ab5;
+  border-radius: 26px;
+}
+
+.badge-alt {
+  background: #ffffff;
+  color: #a17b91;
+}
+
+.badge-muted {
+  background: #fff5f9;
+  color: #a17b91;
+}
+
+.demo-form input:not([type=checkbox]),
+.demo-form select,
+.demo-form textarea {
+  background: #fff5f9;
+  color: var(--text);
+  border-color: #f2dce8;
+  border-radius: 26px;
+}
+
+.progress-track {
+  background: #f2dce8;
+}
+
+.progress-track span {
+  background: #e58ab5;
+}
+
+.site-footer {
+  color: #a17b91;
+  border-top-color: #f2dce8;
+}
+
+h1,h2,h3,h4{font-family:'Nunito',sans-serif} .button{border-radius:999px} .badge{border-radius:999px} .panel{border-radius:24px}
