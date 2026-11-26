@@ -1,0 +1,14 @@
+@import url("./modern.css");
+:root{font-family:'Courier New',monospace;--bg:#f4f4f4;--surface:#fff;--text:#171717;--muted:#666;--accent:#171717;--border:#bdbdbd;--radius:0px;--shadow:none}
+body{background:repeating-linear-gradient(0deg,#f4f4f4,#f4f4f4 27px,#e9e9e9 28px)}
+.brand,h1,h2,h3,h4{font-family:'Courier New',monospace;letter-spacing:-1px}
+.site-header{background:#fff;border-bottom:2px dashed #777}
+.hero{background:#e8e8e8;border-bottom:2px dashed #777}
+.eyebrow,.brand span,.hero h1 span{color:#333}
+.panel,.sample-card{border:1px solid #777;border-radius:0;box-shadow:none;background:#fff}
+.button{border:1px solid #171717;border-radius:0;font-family:inherit;text-transform:uppercase}
+.button-primary{background:#171717;color:#fff}.button-secondary{background:#fff;color:#171717;border-color:#171717}
+.badge{border-radius:0;background:#171717;color:#fff;font-family:inherit}
+.demo-form input:not([type=checkbox]),.demo-form select,.demo-form textarea{border:1px solid #777;border-radius:0;background:#fff;font-family:inherit}
+.progress-track{border-radius:0;background:#ddd}.progress-track span{border-radius:0;background:#171717}
+.site-footer{border-top:2px dashed #777}
