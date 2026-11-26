@@ -1,0 +1,126 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  font-family: 'DM Mono',monospace;
+  color: #38291f;
+  background: #f3ede4;
+  --bg: #f3ede4;
+  --surface: #fffaf2;
+  --text: #38291f;
+  --muted: #88715e;
+  --accent: #9a5b32;
+  --border: #dfcdb9;
+  --radius: 5px;
+  --shadow: 5px 5px 0 #38291f18;
+}
+
+body {
+  background: #f3ede4;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  background: #fffaf2;
+  border-bottom: 1px solid #dfcdb9;
+}
+
+.brand span,
+.hero h1 span {
+  color: #9a5b32;
+}
+
+nav a,
+.theme-picker {
+  color: #88715e;
+}
+
+.theme-picker select {
+  background: #fffaf2;
+  color: #38291f;
+  border: 1px solid #dfcdb9;
+  border-radius: 5px;
+}
+
+.hero {
+  background: linear-gradient(135deg,#e9d7c4,#f3ede4 65%);
+}
+
+.eyebrow {
+  color: #9a5b32;
+}
+
+.button-primary {
+  background: #8c4f2b;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.button-secondary {
+  background: #fffaf2;
+  color: var(--text);
+  border-color: #dfcdb9;
+}
+
+.button-quiet {
+  color: var(--accent);
+}
+
+.panel,
+.sample-card {
+  background: #fffaf2;
+  border-color: #dfcdb9;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel-intro blockquote {
+  background: #fffaf2;
+  color: var(--text);
+  border-left-color: #9a5b32;
+  border-radius: 5px;
+}
+
+.badge {
+  background: #dfcdb9;
+  color: #9a5b32;
+  border-radius: 5px;
+}
+
+.badge-alt {
+  background: #fffaf2;
+  color: #88715e;
+}
+
+.badge-muted {
+  background: #f3ede4;
+  color: #88715e;
+}
+
+.demo-form input:not([type=checkbox]),
+.demo-form select,
+.demo-form textarea {
+  background: #f3ede4;
+  color: var(--text);
+  border-color: #dfcdb9;
+  border-radius: 5px;
+}
+
+.progress-track {
+  background: #dfcdb9;
+}
+
+.progress-track span {
+  background: #9a5b32;
+}
+
+.site-footer {
+  color: #88715e;
+  border-top-color: #dfcdb9;
+}
+
+h1,h2,h3,h4{font-family:'DM Mono',monospace;letter-spacing:-1px} .button{border-radius:2px;text-transform:uppercase} .panel{border:1px solid #cbb49b}
