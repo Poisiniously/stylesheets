@@ -11,6 +11,14 @@ A small collection of reusable CSS themes with a live HTML showcase.
   - `cyberpunk.css`
   - `minimal.css`
   - `retro.css`
+  - `ocean.css`
+  - `forest.css`
+  - `rose.css`
+  - `sunset.css`
+  - `lavender.css`
+  - `mint.css`
+  - `amber.css`
+  - `slate.css`
 
 ## Run locally
 
