@@ -1,6 +1,5 @@
 @import url("./modern.css");
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
-
 :root {
   font-family: 'DM Mono',monospace;
   color: #38291f;
@@ -123,4 +122,16 @@ nav a,
   border-top-color: #dfcdb9;
 }
 
-h1,h2,h3,h4{font-family:'DM Mono',monospace;letter-spacing:-1px} .button{border-radius:2px;text-transform:uppercase} .panel{border:1px solid #cbb49b}
+h1,h2,h3,h4 {
+  font-family:'DM Mono',monospace;
+  letter-spacing:-1px
+}
+
+.button {
+  border-radius:2px;
+  text-transform:uppercase
+}
+
+.panel {
+  border:1px solid #cbb49b
+}
