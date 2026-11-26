@@ -123,19 +123,19 @@ nav a,
 }
 
 h1,h2,h3,h4 {
-  font-family:'Lora',serif
+  font-family: 'Lora',serif;
 }
 
 .button {
-  border-radius:4px
+  border-radius: 4px;
 }
 
 .panel {
-  border-bottom:3px solid #e7c6b4
+  border-bottom: 3px solid #e7c6b4;
 }
 
 .badge {
-  border-radius:4px;
-  background:#f5dfd2;
-  color:#98472f
+  border-radius: 4px;
+  background: #f5dfd2;
+  color: #98472f;
 }
