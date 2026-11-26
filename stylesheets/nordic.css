@@ -1,0 +1,12 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+:root{font-family:'Nunito Sans',sans-serif;--bg:#edf2ef;--surface:#fbfdfb;--text:#263a35;--muted:#71827c;--accent:#668b7d;--border:#d8e2dc;--radius:14px;--shadow:0 8px 24px #29483b0c}
+body{background:var(--bg)}.site-header{background:#fbfdfb}
+.brand,h1,h2,h3,h4{font-family:'Nunito Sans',sans-serif;letter-spacing:-.8px}
+.hero{background:linear-gradient(130deg,#dce8e1,#edf2ef 65%)}
+.hero h1{font-weight:800}.button{border-radius:8px}
+.button-primary{background:#668b7d}.button-secondary{background:#fbfdfb;border-color:#c6d5cc;color:#45685a}
+.panel,.sample-card{box-shadow:0 8px 24px #29483b0c;border-radius:14px}
+.badge{background:#dce9e1;color:#426d59;border-radius:7px}.badge-alt{background:#f4e8d9;color:#956d45}
+.demo-form input:not([type=checkbox]),.demo-form select,.demo-form textarea{background:#fbfdfb;border-radius:8px}
+.progress-track{background:#d8e2dc}.progress-track span{background:#668b7d}
