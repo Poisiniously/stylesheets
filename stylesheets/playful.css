@@ -1,82 +1,82 @@
 @import url("./modern.css");
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
 :root {
-  font-family:Nunito,sans-serif;
-  --bg:#fff8f0;
-  --surface:#fff;
-  --text:#34294b;
-  --muted:#83758e;
-  --accent:#f06c9b;
-  --border:#f4dce7;
-  --radius:22px;
-  --shadow:0 10px 0 #f4dce7
+  font-family: Nunito,sans-serif;
+  --bg: #fff8f0;
+  --surface: #fff;
+  --text: #34294b;
+  --muted: #83758e;
+  --accent: #f06c9b;
+  --border: #f4dce7;
+  --radius: 22px;
+  --shadow: 0 10px 0 #f4dce7;
 }
 
 body {
-  background:linear-gradient(145deg,#fff8f0,#fff0f5)
+  background: linear-gradient(145deg,#fff8f0,#fff0f5);
 }
 
 .brand,h1,h2,h3,h4 {
-  font-family:Nunito,sans-serif;
-  font-weight:900;
-  letter-spacing:-1px
+  font-family: Nunito,sans-serif;
+  font-weight: 900;
+  letter-spacing: -1px;
 }
 
 .brand span,.hero h1 span {
-  color:#f06c9b
+  color: #f06c9b;
 }
 
 .site-header {
-  background:#fff;
-  border-bottom:3px solid #ffe1ec
+  background: #fff;
+  border-bottom: 3px solid #ffe1ec;
 }
 
 .hero {
-  background:radial-gradient(circle at 80% 15%,#ffe0eb 0,transparent 42%),transparent
+  background: radial-gradient(circle at 80% 15%,#ffe0eb 0,transparent 42%),transparent;
 }
 
 .panel,.sample-card {
-  border:2px solid #f4dce7;
-  box-shadow:0 8px 0 #f4dce7
+  border: 2px solid #f4dce7;
+  box-shadow: 0 8px 0 #f4dce7;
 }
 
 .button {
-  border-radius:999px;
-  font-weight:800
+  border-radius: 999px;
+  font-weight: 800;
 }
 
 .button-primary {
-  background:#f06c9b;
-  box-shadow:0 5px 0 #c84c7a
+  background: #f06c9b;
+  box-shadow: 0 5px 0 #c84c7a;
 }
 
 .button-secondary {
-  background:#fff;
-  border-color:#8bcac1;
-  color:#3d8279
+  background: #fff;
+  border-color: #8bcac1;
+  color: #3d8279;
 }
 
 .badge {
-  border-radius:999px;
-  background:#ffe0eb;
-  color:#bf4775
+  border-radius: 999px;
+  background: #ffe0eb;
+  color: #bf4775;
 }
 
 .badge-alt {
-  background:#dcf5ed;
-  color:#397e70
+  background: #dcf5ed;
+  color: #397e70;
 }
 
 .demo-form input:not([type=checkbox]),.demo-form select,.demo-form textarea {
-  border:2px solid #f4dce7;
-  border-radius:13px;
-  background:#fff
+  border: 2px solid #f4dce7;
+  border-radius: 13px;
+  background: #fff;
 }
 
 .progress-track {
-  background:#f4dce7
+  background: #f4dce7;
 }
 
 .progress-track span {
-  background:#f06c9b
+  background: #f06c9b;
 }
