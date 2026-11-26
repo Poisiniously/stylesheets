@@ -34,7 +34,7 @@ a {
   text-decoration: none;
 }
 
-a: hover {
+a :hover {
   text-decoration: underline;
 }
 
@@ -165,7 +165,7 @@ h1 {
   color: var(--accent);
 }
 
-button: disabled {
+button :disabled {
   opacity: .4;
   cursor: not-allowed;
   transform: none;
