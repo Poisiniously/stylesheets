@@ -123,17 +123,17 @@ nav a,
 }
 
 h1,h2,h3,h4 {
-  font-family:'Nunito',sans-serif
+  font-family: 'Nunito',sans-serif;
 }
 
 .button {
-  border-radius:999px
+  border-radius: 999px;
 }
 
 .badge {
-  border-radius:999px
+  border-radius: 999px;
 }
 
 .panel {
-  border-radius:24px
+  border-radius: 24px;
 }
