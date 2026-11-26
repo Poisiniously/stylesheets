@@ -5,18 +5,26 @@ const form = document.querySelector(".demo-form");
 const feedback = document.querySelector("#form-feedback");
 
 const themeNames = {
-  modern: "Modern",
-  cyberpunk: "Cyberpunk",
-  minimal: "Minimal",
-  retro: "Retro",
-  ocean: "Ocean",
-  forest: "Forest",
-  rose: "Rose",
-  sunset: "Sunset",
-  lavender: "Lavender",
-  mint: "Mint",
   amber: "Amber",
-  slate: "Slate"
+  arctic: "Arctic",
+  cherry: "Cherry",
+  coffee: "Coffee",
+  cyberpunk: "Cyberpunk",
+  forest: "Forest",
+  graphite: "Graphite",
+  lavender: "Lavender",
+  minimal: "Minimal",
+  mint: "Mint",
+  modern: "Modern",
+  ocean: "Ocean",
+  retro: "Retro",
+  rose: "Rose",
+  sakura: "Sakura",
+  slate: "Slate",
+  sunset: "Sunset",
+  terminal: "Terminal",
+  terracotta: "Terracotta",
+  violet: "Violet"
 };
 
 function applyTheme(theme) {
