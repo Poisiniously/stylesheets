@@ -1,6 +1,5 @@
 @import url("./modern.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 :root {
   font-family: 'Inter',sans-serif;
   color: #f1f3f5;
@@ -123,4 +122,25 @@ nav a,
   border-top-color: #383d46;
 }
 
-body{background:linear-gradient(145deg,#17191d,#20242b);color:var(--text)} .button-primary{color:#17191d} .button-secondary{background:#2a2e35} .badge{background:#353b45;color:#e6ebf2} .badge-alt{background:#303b38;color:#a8d7c1}
+body {
+  background:linear-gradient(145deg,#17191d,#20242b);
+  color:var(--text)
+}
+
+.button-primary {
+  color:#17191d
+}
+
+.button-secondary {
+  background:#2a2e35
+}
+
+.badge {
+  background:#353b45;
+  color:#e6ebf2
+}
+
+.badge-alt {
+  background:#303b38;
+  color:#a8d7c1
+}
