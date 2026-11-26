@@ -1,0 +1,126 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Lora',serif;
+  color: #432c24;
+  background: #f6eee7;
+  --bg: #f6eee7;
+  --surface: #fffaf5;
+  --text: #432c24;
+  --muted: #92766a;
+  --accent: #bd6346;
+  --border: #e8d4c7;
+  --radius: 14px;
+  --shadow: 0 14px 32px #6e392218;
+}
+
+body {
+  background: #f6eee7;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  background: #fffaf5;
+  border-bottom: 1px solid #e8d4c7;
+}
+
+.brand span,
+.hero h1 span {
+  color: #bd6346;
+}
+
+nav a,
+.theme-picker {
+  color: #92766a;
+}
+
+.theme-picker select {
+  background: #fffaf5;
+  color: #432c24;
+  border: 1px solid #e8d4c7;
+  border-radius: 14px;
+}
+
+.hero {
+  background: linear-gradient(120deg,#f0d5c4,#f6eee7 65%);
+}
+
+.eyebrow {
+  color: #bd6346;
+}
+
+.button-primary {
+  background: #b9573c;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.button-secondary {
+  background: #fffaf5;
+  color: var(--text);
+  border-color: #e8d4c7;
+}
+
+.button-quiet {
+  color: var(--accent);
+}
+
+.panel,
+.sample-card {
+  background: #fffaf5;
+  border-color: #e8d4c7;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel-intro blockquote {
+  background: #fffaf5;
+  color: var(--text);
+  border-left-color: #bd6346;
+  border-radius: 14px;
+}
+
+.badge {
+  background: #e8d4c7;
+  color: #bd6346;
+  border-radius: 14px;
+}
+
+.badge-alt {
+  background: #fffaf5;
+  color: #92766a;
+}
+
+.badge-muted {
+  background: #f6eee7;
+  color: #92766a;
+}
+
+.demo-form input:not([type=checkbox]),
+.demo-form select,
+.demo-form textarea {
+  background: #f6eee7;
+  color: var(--text);
+  border-color: #e8d4c7;
+  border-radius: 14px;
+}
+
+.progress-track {
+  background: #e8d4c7;
+}
+
+.progress-track span {
+  background: #bd6346;
+}
+
+.site-footer {
+  color: #92766a;
+  border-top-color: #e8d4c7;
+}
+
+h1,h2,h3,h4{font-family:'Lora',serif} .button{border-radius:4px} .panel{border-bottom:3px solid #e7c6b4} .badge{border-radius:4px;background:#f5dfd2;color:#98472f}
