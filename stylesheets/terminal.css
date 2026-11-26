@@ -1,3 +1,4 @@
+/* Classic Windows Command Prompt appearance */
 @import url("./modern.css");
 
 :root {
@@ -6,11 +7,11 @@
   background: #000;
   color-scheme: dark;
   --bg: #000;
-  --surface: #0c0c0c;
+  --surface: #000;
   --text: #c0c0c0;
-  --muted: #8b8b8b;
+  --muted: #c0c0c0;
   --accent: #c0c0c0;
-  --border: #555;
+  --border: #000;
   --radius: 0;
   --shadow: none;
 }
@@ -19,10 +20,16 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  color: #c0c0c0;
+  min-height: 100%;
   background: #000;
+  color: #c0c0c0;
   font-family: Consolas, "Lucida Console", monospace;
+}
+
+body {
+  margin: 0;
 }
 
 ::selection {
@@ -31,52 +38,57 @@ body {
 }
 
 a {
-  color: #fff;
+  color: #c0c0c0;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #000;
-  background: #c0c0c0;
+  color: #fff;
+  background: #000080;
   text-shadow: none;
 }
 
 .site-header {
-  min-height: 42px;
-  padding: 8px max(5vw, 18px);
+  position: relative;
+  top: auto;
+  z-index: 1;
+  min-height: 30px;
+  height: 30px;
+  padding: 4px 8px;
+  display: flex;
+  gap: 20px;
   color: #000;
   background: #c0c0c0;
   border: 1px solid #fff;
-  border-bottom-color: #555;
+  border-bottom: 1px solid #777;
   box-shadow: none;
 }
 
 .brand,
 .brand span {
   color: #000;
-  font-family: Consolas, monospace;
-  font-size: 14px;
-  font-weight: 700;
+  font: 13px Consolas, monospace;
+  font-weight: 400;
   letter-spacing: 0;
   text-shadow: none;
 }
 
 .brand::before {
-  content: "";
+  content: none;
 }
 
 nav {
-  gap: 16px;
+  gap: 14px;
 }
 
 nav a,
 .theme-picker {
   color: #000;
-  font-size: 12px;
+  font: 12px Consolas, monospace;
 }
 
 nav a::before {
-  content: "";
+  content: none;
 }
 
 nav a:hover {
@@ -85,48 +97,30 @@ nav a:hover {
   text-decoration: none;
 }
 
-.theme-picker select {
-  padding: 5px 24px 5px 8px;
-  color: #000;
-  background: #fff;
-  border: 1px solid #555;
-  border-radius: 0;
-  font: inherit;
-  outline: none;
+.theme-picker {
+  margin-left: auto;
+  gap: 6px;
 }
 
-.theme-picker select:focus,
-.demo-form input:focus,
-.demo-form select:focus,
-.demo-form textarea:focus {
-  border-color: #fff;
-  outline: 1px dotted #fff;
-  outline-offset: 2px;
-  box-shadow: none;
+.theme-picker select {
+  padding: 1px 4px;
+  color: #000;
+  background: #fff;
+  border: 1px solid #777;
+  border-radius: 0;
+  font: 12px Consolas, monospace;
 }
 
 .hero {
-  position: relative;
-  overflow: hidden;
-  padding: 70px 8vw 58px;
+  padding: 22px 12px 16px;
   background: #000;
-  border: 1px solid #555;
-  border-top: 0;
-}
-
-.hero::after {
-  content: "Microsoft Windows [Version 10.0.19045.0]\\A (c) Microsoft Corporation. All rights reserved.";
-  display: block;
-  margin-top: 28px;
-  color: #c0c0c0;
-  white-space: pre-line;
-  font-size: 13px;
-  line-height: 1.7;
+  border: 0;
 }
 
 .eyebrow {
+  margin: 0 0 12px;
   color: #c0c0c0;
-  font-size: 12px;
+  font: 13px Consolas, monospace;
   letter-spacing: 0;
 }
 
@@ -134,237 +128,269 @@ h1,
 h2,
 h3,
 h4 {
-  color: #fff;
+  color: #c0c0c0;
   font-family: Consolas, "Lucida Console", monospace;
   font-weight: 400;
   letter-spacing: 0;
 }
 
 h1 {
-  font-size: clamp(30px, 5vw, 52px);
-  line-height: 1.2;
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .hero h1::before {
-  content: "C:\\Users\\Patrick> ";
+  content: "C:\\Users\\Patrick>";
   display: block;
-  margin: 0 0 12px;
+  margin-bottom: 8px;
   color: #c0c0c0;
-  font-size: 16px;
-  font-weight: 400;
+  font: 16px Consolas, monospace;
 }
 
-.brand span,
-.hero h1 span {
-  color: #fff;
+.hero h1 span,
+.brand span {
+  color: inherit;
   text-shadow: none;
 }
 
 .hero-copy {
-  max-width: 680px;
+  max-width: 900px;
   color: #c0c0c0;
-  font-size: 14px;
-  line-height: 1.7;
+  font: 13px/1.5 Consolas, monospace;
+}
+
+.hero-copy::before {
+  content: "Microsoft Windows [Version 10.0.19045.0]";
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hero-copy::after {
+  content: "(c) Microsoft Corporation. All rights reserved.";
+  display: block;
+  margin-top: 4px;
 }
 
 .hero-actions {
-  margin-top: 24px;
+  display: flex;
+  gap: 8px;
+  margin: 14px 0;
 }
 
 .button {
-  min-height: 34px;
-  padding: 7px 14px;
-  color: #000;
-  background: #c0c0c0;
-  border: 2px solid;
-  border-color: #fff #555 #555 #fff;
+  min-height: 0;
+  padding: 2px 7px;
+  color: #c0c0c0;
+  background: #000;
+  border: 1px solid #c0c0c0;
   border-radius: 0;
   font: 13px Consolas, monospace;
   text-transform: none;
+  box-shadow: none;
   transition: none;
 }
 
-.button:hover {
-  color: #fff;
-  background: #000080;
-  border-color: #fff #555 #555 #fff;
-  text-decoration: none;
+.button:hover,
+.button-primary:hover,
+.button-secondary:hover,
+.button-quiet:hover {
+  color: #000;
+  background: #c0c0c0;
+  border-color: #c0c0c0;
   transform: none;
+  box-shadow: none;
+  text-decoration: none;
 }
 
 .button-primary,
 .button-secondary,
 .button-quiet {
-  color: #000;
-  background: #c0c0c0;
-  border-color: #fff #555 #555 #fff;
+  color: #c0c0c0;
+  background: #000;
+  border-color: #c0c0c0;
   box-shadow: none;
-}
-
-.button-primary:hover,
-.button-secondary:hover,
-.button-quiet:hover {
-  color: #fff;
-  background: #000080;
 }
 
 button:disabled {
-  opacity: .5;
+  color: #777;
+  border-color: #777;
+  opacity: 1;
 }
 
-.style-status,
-.status-dot {
+.style-status {
   color: #c0c0c0;
+  font: 13px Consolas, monospace;
 }
 
 .status-dot {
-  background: #c0c0c0;
-  box-shadow: none;
+  display: none;
 }
 
 .section {
-  padding-top: 58px;
+  padding: 8px 12px 24px;
+}
+
+.section-heading {
+  display: block;
+  margin-bottom: 12px;
 }
 
 .section-heading h2 {
-  color: #fff;
-  font-size: clamp(22px, 3vw, 32px);
+  margin: 0 0 8px;
+  color: #c0c0c0;
+  font: 16px Consolas, monospace;
 }
 
 .section-heading h2::before {
   content: "C:\\>";
-  margin-right: 10px;
   color: #c0c0c0;
 }
 
 .section-heading > p {
-  color: #a0a0a0;
-  font-size: 13px;
+  max-width: none;
+  color: #c0c0c0;
+  font: 13px/1.5 Consolas, monospace;
 }
 
 .component-grid {
-  gap: 14px;
+  display: block;
 }
 
 .panel,
-.sample-card {
+.sample-card,
+.panel-intro blockquote {
+  margin: 0 0 18px;
+  padding: 0;
   color: #c0c0c0;
-  background: #000;
-  border: 1px solid #777;
+  background: transparent;
+  border: 0;
   border-radius: 0;
   box-shadow: none;
 }
 
-.panel {
-  padding: 20px;
-}
-
 .panel::before {
-  content: "Command Prompt";
-  display: block;
-  margin: -20px -20px 18px;
-  padding: 5px 9px;
-  color: #000;
-  background: #c0c0c0;
-  border-bottom: 1px solid #fff;
-  font: 12px Consolas, monospace;
+  content: none;
 }
 
 .panel h3 {
-  color: #fff;
-  font-size: 17px;
+  margin: 10px 0 6px;
+  color: #c0c0c0;
+  font: 13px Consolas, monospace;
 }
 
-.panel p {
+.panel h3::before {
+  content: "C:\\>";
+  margin-right: 7px;
+}
+
+.panel p,
+.panel-intro blockquote,
+.sample-card p {
   color: #c0c0c0;
-  font-size: 13px;
-  line-height: 1.7;
+  font: 13px/1.5 Consolas, monospace;
 }
 
 .panel-intro blockquote {
-  margin-top: 18px;
-  padding: 10px 12px;
-  color: #fff;
-  background: #000;
-  border-left: 2px solid #c0c0c0;
-  border-radius: 0;
-  font-size: 13px;
-}
-
-.sample-card {
-  padding: 14px;
+  padding: 0;
+  border: 0;
 }
 
 .sample-card h4 {
-  color: #fff;
+  margin: 8px 0 4px;
+  color: #c0c0c0;
+  font: 13px Consolas, monospace;
 }
 
 .badge,
 .badge-alt,
 .badge-muted {
-  padding: 3px 7px;
-  color: #000;
-  background: #c0c0c0;
-  border: 1px solid #fff;
+  padding: 0;
+  color: #c0c0c0;
+  background: transparent;
+  border: 0;
   border-radius: 0;
-  font: 11px Consolas, monospace;
+  font: 13px Consolas, monospace;
   letter-spacing: 0;
 }
 
-.badge-alt {
-  color: #fff;
-  background: #000080;
-  border-color: #0000aa;
+.badge::before {
+  content: "[";
 }
 
-.badge-muted {
-  color: #c0c0c0;
-  background: #333;
-  border-color: #777;
+.badge::after {
+  content: "]";
 }
 
 .muted,
-.progress-label {
-  color: #999;
+.progress-label,
+.demo-list li,
+.demo-list strong,
+.demo-form label,
+.checkbox-label,
+.form-feedback {
+  color: #c0c0c0;
+  font: 13px Consolas, monospace;
+}
+
+.demo-list {
+  margin: 8px 0;
+  padding-left: 0;
+  list-style: none;
 }
 
 .demo-list li {
-  color: #c0c0c0;
-  border-bottom: 1px dotted #555;
-  font-size: 13px;
+  display: block;
+  padding: 2px 0;
+  border: 0;
+}
+
+.demo-list li span::before {
+  content: "  ";
 }
 
 .demo-list strong {
-  color: #fff;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.progress-label {
+  display: block;
+  margin: 8px 0 4px;
 }
 
 .progress-track {
-  height: 8px;
-  background: #333;
-  border: 1px solid #777;
+  width: 260px;
+  max-width: 100%;
+  height: 12px;
+  background: #000;
+  border: 1px solid #c0c0c0;
   border-radius: 0;
 }
 
 .progress-track span {
+  display: block;
+  height: 100%;
   background: #c0c0c0;
   border-radius: 0;
   box-shadow: none;
 }
 
 .demo-form {
-  gap: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 420px);
+  gap: 6px;
 }
 
-.demo-form label,
-.checkbox-label {
-  color: #c0c0c0;
-  font-size: 13px;
+.demo-form label {
+  font-weight: 400;
 }
 
 .demo-form input:not([type=checkbox]),
 .demo-form select,
 .demo-form textarea {
-  padding: 8px;
+  width: 100%;
+  padding: 4px 6px;
   color: #c0c0c0;
   background: #000;
   border: 1px solid #777;
@@ -377,31 +403,49 @@ button:disabled {
   color: #777;
 }
 
+.demo-form input:focus,
+.demo-form select:focus,
+.demo-form textarea:focus,
+.theme-picker select:focus {
+  outline: 1px dotted #c0c0c0;
+  outline-offset: 1px;
+  box-shadow: none;
+}
+
 .demo-form input[type=checkbox] {
   accent-color: #c0c0c0;
 }
 
-.form-feedback {
-  color: #fff;
-}
-
 .site-footer {
-  color: #999;
+  display: block;
+  padding: 12px;
+  color: #c0c0c0;
   background: #000;
-  border-top: 1px solid #777;
-  font: 12px Consolas, monospace;
+  border-top: 1px solid #555;
+  font: 13px Consolas, monospace;
 }
 
 @media (max-width: 760px) {
+  .site-header {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .theme-picker {
+    margin-left: 0;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
   .hero {
-    padding: 48px 6vw;
+    padding: 18px 10px;
   }
 
-  .hero h1::before {
-    font-size: 14px;
-  }
-
-  .panel::before {
-    margin: -20px -20px 16px;
+  .section {
+    padding: 8px 10px 20px;
   }
 }
