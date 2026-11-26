@@ -123,15 +123,15 @@ nav a,
 }
 
 h1,h2,h3,h4 {
-  font-family:'DM Mono',monospace;
-  letter-spacing:-1px
+  font-family: 'DM Mono',monospace;
+  letter-spacing: -1px;
 }
 
 .button {
-  border-radius:2px;
-  text-transform:uppercase
+  border-radius: 2px;
+  text-transform: uppercase;
 }
 
 .panel {
-  border:1px solid #cbb49b
+  border: 1px solid #cbb49b;
 }
