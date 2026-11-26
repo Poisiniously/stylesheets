@@ -19,6 +19,14 @@ A small collection of reusable CSS themes with a live HTML showcase.
   - `mint.css`
   - `amber.css`
   - `slate.css`
+  - `arctic.css`
+  - `cherry.css`
+  - `coffee.css`
+  - `graphite.css`
+  - `sakura.css`
+  - `terminal.css`
+  - `terracotta.css`
+  - `violet.css`
 
 ## Run locally
 
