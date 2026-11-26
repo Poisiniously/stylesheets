@@ -1,0 +1,126 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter',sans-serif;
+  color: #f1f3f5;
+  background: #17191d;
+  --bg: #17191d;
+  --surface: #22252b;
+  --text: #f1f3f5;
+  --muted: #a0a6b0;
+  --accent: #b6c2d1;
+  --border: #383d46;
+  --radius: 12px;
+  --shadow: 0 16px 40px #0005;
+}
+
+body {
+  background: #17191d;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  background: #22252b;
+  border-bottom: 1px solid #383d46;
+}
+
+.brand span,
+.hero h1 span {
+  color: #b6c2d1;
+}
+
+nav a,
+.theme-picker {
+  color: #a0a6b0;
+}
+
+.theme-picker select {
+  background: #22252b;
+  color: #f1f3f5;
+  border: 1px solid #383d46;
+  border-radius: 12px;
+}
+
+.hero {
+  background: radial-gradient(ellipse at 80% 10%,#353c48 0,transparent 48%),#17191d;
+}
+
+.eyebrow {
+  color: #b6c2d1;
+}
+
+.button-primary {
+  background: #e4e9ef;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.button-secondary {
+  background: #22252b;
+  color: var(--text);
+  border-color: #383d46;
+}
+
+.button-quiet {
+  color: var(--accent);
+}
+
+.panel,
+.sample-card {
+  background: #22252b;
+  border-color: #383d46;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel-intro blockquote {
+  background: #22252b;
+  color: var(--text);
+  border-left-color: #b6c2d1;
+  border-radius: 12px;
+}
+
+.badge {
+  background: #383d46;
+  color: #b6c2d1;
+  border-radius: 12px;
+}
+
+.badge-alt {
+  background: #22252b;
+  color: #a0a6b0;
+}
+
+.badge-muted {
+  background: #17191d;
+  color: #a0a6b0;
+}
+
+.demo-form input:not([type=checkbox]),
+.demo-form select,
+.demo-form textarea {
+  background: #17191d;
+  color: var(--text);
+  border-color: #383d46;
+  border-radius: 12px;
+}
+
+.progress-track {
+  background: #383d46;
+}
+
+.progress-track span {
+  background: #b6c2d1;
+}
+
+.site-footer {
+  color: #a0a6b0;
+  border-top-color: #383d46;
+}
+
+body{background:linear-gradient(145deg,#17191d,#20242b);color:var(--text)} .button-primary{color:#17191d} .button-secondary{background:#2a2e35} .badge{background:#353b45;color:#e6ebf2} .badge-alt{background:#303b38;color:#a8d7c1}
