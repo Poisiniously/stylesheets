@@ -74,7 +74,6 @@ async function discoverStylesheets() {
     populateThemeSelect(fallbackThemes.map((theme) => `${theme}.css`));
   }
 
-  themeSelect.disabled = Object.keys(themeNames).length === 0;
 }
 
 function applyTheme(theme) {
@@ -93,7 +92,11 @@ function applyTheme(theme) {
 }
 
 async function initializeThemes() {
-  themeSelect.disabled = true;
+  // Populate a usable list immediately; refresh it from GitHub in the background.
+  populateThemeSelect(fallbackThemes.map((theme) => `${theme}.css`));
+  const firstTheme = Object.hasOwn(themeNames, "modern") ? "modern" : Object.keys(themeNames)[0];
+  if (firstTheme) applyTheme(firstTheme);
+
   await discoverStylesheets();
 
   let savedTheme = "modern";
