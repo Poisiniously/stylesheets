@@ -6,42 +6,33 @@ A small collection of reusable CSS themes with a live HTML showcase.
 
 - `index.html` — the showcase page with typography, buttons, cards, badges, lists, progress bars and form controls.
 - `script.js` — switches the active stylesheet and remembers the selected theme in local storage.
-- `stylesheets/` — standalone theme files:
-  - `modern.css`
-  - `cyberpunk.css`
-  - `minimal.css`
-  - `retro.css`
-  - `ocean.css`
-  - `forest.css`
-  - `rose.css`
-  - `sunset.css`
-  - `lavender.css`
-  - `mint.css`
-  - `amber.css`
-  - `slate.css`
-  - `arctic.css`
-  - `cherry.css`
-  - `coffee.css`
-  - `graphite.css`
-  - `sakura.css`
-  - `terminal.css`
-  - `terracotta.css`
-  - `violet.css`
+- `build.py` — scans the `stylesheets/` directory and generates `stylesheets.json`.
+- `stylesheets.json` — generated manifest of available CSS themes.
+- `stylesheets/` — standalone theme files.
 
 ## Automatic theme discovery
 
-The theme selector reads the contents of the `stylesheets/` folder from the GitHub repository through the GitHub Contents API. Every `.css` file in that folder is added to the dropdown automatically and sorted alphabetically.
+The build script scans the `stylesheets/` directory for every `.css` file and writes the sorted filenames to `stylesheets.json`. The website reads that manifest; it does not call the GitHub API.
 
-To add a theme, add a CSS file to `stylesheets/` (for example, `my-theme.css`). It will appear in the selector after the site is refreshed and the GitHub Pages deployment is updated. Internet access is required for live discovery; a built-in fallback list is used if the API is unavailable.
+The GitHub Actions workflow runs the build script whenever changes are pushed to `main`, then deploys the generated site to GitHub Pages. Add a new CSS file to `stylesheets/` and push it — no HTML or JavaScript edits are needed.
 
-## Run locally
+### Run the build locally
 
-Open `index.html` in a browser. No build tools or dependencies are required. An internet connection is only needed for the optional Google Fonts used by some themes.
+Requires Python 3. Run:
+
+```bash
+python build.py
+```
+
+This regenerates `stylesheets.json`. Then open the site through a local web server (for example, `python -m http.server 8000`) and visit `http://localhost:8000`.
+
+## GitHub Pages setup
+
+In the repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. The workflow in `.github/workflows/pages.yml` handles subsequent deployments.
 
 ## Add a stylesheet
 
-1. Add a new CSS file in `stylesheets/`.
-2. Add an option to the stylesheet selector in `index.html`.
-3. Add its key and display name to `themeNames` in `script.js`.
+1. Add a `.css` file inside `stylesheets/`.
+2. Run `python build.py` locally, or simply push the new file and let GitHub Actions regenerate the manifest and deploy the site.
 
 Each stylesheet should style the shared class names in the showcase so that all components remain functional across themes.
