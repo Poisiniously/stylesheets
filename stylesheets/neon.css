@@ -1,0 +1,13 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+:root{font-family:Inter,sans-serif;--bg:#080b16;--surface:#10172a;--text:#e9f7ff;--muted:#91a8bd;--accent:#00e5ff;--border:#24415a;--radius:12px;--shadow:0 0 22px #00e5ff18}
+body{background:#080b16;color:var(--text)}.site-header{background:#0b1120;border-color:#24415a}
+.brand,h1,h2,h3,h4{font-family:Orbitron,sans-serif;letter-spacing:-.5px}
+.brand span,.hero h1 span,.eyebrow{color:#00e5ff}
+.hero{background:radial-gradient(ellipse at 80% 20%,#102d4a 0,transparent 48%),#080b16}
+.panel,.sample-card{background:#10172a;border-color:#24415a;box-shadow:inset 0 0 0 1px #00e5ff12,0 0 22px #00e5ff0c}
+.button{border-radius:5px;text-transform:uppercase;letter-spacing:.5px}
+.button-primary{background:#00d9ef;color:#06111a;box-shadow:0 0 18px #00e5ff55}.button-secondary{background:#10172a;border-color:#00a9c7;color:#8df4ff}
+.badge{background:#12384a;color:#69f4ff;border:1px solid #087e99;border-radius:5px}
+.demo-form input:not([type=checkbox]),.demo-form select,.demo-form textarea{background:#080f1d;color:var(--text);border-color:#24415a;border-radius:5px}
+.progress-track{background:#20354a}.progress-track span{background:#00e5ff}
