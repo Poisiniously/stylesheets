@@ -2,10 +2,10 @@
 :root {
   font-family: 'DM Sans',sans-serif;
   color: #38251f;
-  background: #ffffff5ed;
+  background: #fff5ed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --bg: #ffffff5ed;
+  --bg: #fff5ed;
   --surface: #ffffff;
   --text: #38251f;
   --muted: #927665;
