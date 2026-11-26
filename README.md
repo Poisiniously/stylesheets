@@ -28,6 +28,12 @@ A small collection of reusable CSS themes with a live HTML showcase.
   - `terracotta.css`
   - `violet.css`
 
+## Automatic theme discovery
+
+The theme selector reads the contents of the `stylesheets/` folder from the GitHub repository through the GitHub Contents API. Every `.css` file in that folder is added to the dropdown automatically and sorted alphabetically.
+
+To add a theme, add a CSS file to `stylesheets/` (for example, `my-theme.css`). It will appear in the selector after the site is refreshed and the GitHub Pages deployment is updated. Internet access is required for live discovery; a built-in fallback list is used if the API is unavailable.
+
 ## Run locally
 
 Open `index.html` in a browser. No build tools or dependencies are required. An internet connection is only needed for the optional Google Fonts used by some themes.
