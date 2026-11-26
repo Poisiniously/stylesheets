@@ -4,10 +4,7 @@ const activeTheme = document.querySelector("#active-theme");
 const form = document.querySelector(".demo-form");
 const feedback = document.querySelector("#form-feedback");
 
-const STYLESHEET_DIRECTORY_API =
-  "https://api.github.com/repos/Poisiniously/stylesheets/contents/stylesheets?ref=main";
-
-// Used only if GitHub's API is unavailable, such as when the site is offline.
+const STYLESHEET_MANIFEST = "stylesheets.json";
 const fallbackThemes = [
   "amber", "arctic", "cherry", "coffee", "cyberpunk",
   "forest", "graphite", "lavender", "minimal", "mint",
@@ -18,22 +15,23 @@ const fallbackThemes = [
 let themeNames = Object.create(null);
 
 function getThemeName(filename) {
-  const slug = filename.slice(0, -4);
-  return slug
+  return filename
+    .replace(/\.css$/i, "")
     .split(/[-_]/)
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
 }
 
 function populateThemeSelect(filenames) {
+  const selectedTheme = themeSelect.value;
   themeNames = Object.create(null);
   themeSelect.replaceChildren();
 
   filenames
-    .filter((filename) => filename.toLowerCase().endsWith(".css"))
+    .filter((filename) => typeof filename === "string" && filename.toLowerCase().endsWith(".css"))
     .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }))
     .forEach((filename) => {
-      const theme = filename.slice(0, -4);
+      const theme = filename.replace(/\.css$/i, "");
       const name = getThemeName(filename);
       themeNames[theme] = name;
 
@@ -42,38 +40,32 @@ function populateThemeSelect(filenames) {
       option.textContent = name;
       themeSelect.append(option);
     });
+
+  if (Object.hasOwn(themeNames, selectedTheme)) {
+    themeSelect.value = selectedTheme;
+  }
 }
 
 async function discoverStylesheets() {
   try {
-    const response = await fetch(STYLESHEET_DIRECTORY_API, {
-      headers: { Accept: "application/vnd.github+json" },
-      cache: "no-store"
-    });
-
+    const response = await fetch(STYLESHEET_MANIFEST, { cache: "no-store" });
     if (!response.ok) {
-      throw new Error(`GitHub API returned ${response.status}`);
+      throw new Error(`Stylesheet manifest returned ${response.status}`);
     }
 
-    const files = await response.json();
-    if (!Array.isArray(files)) {
-      throw new Error("Unexpected stylesheet directory response");
+    const filenames = await response.json();
+    if (!Array.isArray(filenames) || filenames.length === 0) {
+      throw new Error("The stylesheet manifest is empty or invalid");
     }
 
-    const cssFiles = files
-      .filter((file) => file.type === "file" && file.name.toLowerCase().endsWith(".css"))
-      .map((file) => file.name);
-
-    if (cssFiles.length === 0) {
-      throw new Error("No CSS files were found in the stylesheets directory");
+    const currentTheme = themeSelect.value;
+    populateThemeSelect(filenames);
+    if (Object.hasOwn(themeNames, currentTheme)) {
+      applyTheme(currentTheme);
     }
-
-    populateThemeSelect(cssFiles);
   } catch (error) {
-    console.warn("Could not discover stylesheets from GitHub. Using fallback list.", error);
-    populateThemeSelect(fallbackThemes.map((theme) => `${theme}.css`));
+    console.warn("Could not load stylesheets.json. Keeping the built-in theme list.", error);
   }
-
 }
 
 function applyTheme(theme) {
@@ -91,13 +83,8 @@ function applyTheme(theme) {
   }
 }
 
-async function initializeThemes() {
-  // Populate a usable list immediately; refresh it from GitHub in the background.
+function initializeThemes() {
   populateThemeSelect(fallbackThemes.map((theme) => `${theme}.css`));
-  const firstTheme = Object.hasOwn(themeNames, "modern") ? "modern" : Object.keys(themeNames)[0];
-  if (firstTheme) applyTheme(firstTheme);
-
-  await discoverStylesheets();
 
   let savedTheme = "modern";
   try {
@@ -106,13 +93,11 @@ async function initializeThemes() {
     // Use the default theme when browser storage is unavailable.
   }
 
-  const initialTheme = Object.hasOwn(themeNames, savedTheme)
-    ? savedTheme
-    : Object.hasOwn(themeNames, "modern")
-      ? "modern"
-      : Object.keys(themeNames)[0];
+  const initialTheme = Object.hasOwn(themeNames, savedTheme) ? savedTheme : "modern";
+  applyTheme(initialTheme);
 
-  if (initialTheme) applyTheme(initialTheme);
+  // The build workflow generates this manifest by scanning stylesheets/.
+  void discoverStylesheets();
 }
 
 themeSelect.addEventListener("change", (event) => {
