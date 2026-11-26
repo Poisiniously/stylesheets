@@ -1,0 +1,126 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans',sans-serif;
+  color: #3d1820;
+  background: #fff3f2;
+  --bg: #fff3f2;
+  --surface: #ffffff;
+  --text: #3d1820;
+  --muted: #95636b;
+  --accent: #c52d4b;
+  --border: #f0d4d8;
+  --radius: 8px;
+  --shadow: 0 12px 30px #7e1b3018;
+}
+
+body {
+  background: #fff3f2;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #f0d4d8;
+}
+
+.brand span,
+.hero h1 span {
+  color: #c52d4b;
+}
+
+nav a,
+.theme-picker {
+  color: #95636b;
+}
+
+.theme-picker select {
+  background: #ffffff;
+  color: #3d1820;
+  border: 1px solid #f0d4d8;
+  border-radius: 8px;
+}
+
+.hero {
+  background: linear-gradient(125deg,#ffe1e4,#fff3f2 58%,#f8d5d8);
+}
+
+.eyebrow {
+  color: #c52d4b;
+}
+
+.button-primary {
+  background: linear-gradient(135deg,#c52d4b,#e34d62);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.button-secondary {
+  background: #ffffff;
+  color: var(--text);
+  border-color: #f0d4d8;
+}
+
+.button-quiet {
+  color: var(--accent);
+}
+
+.panel,
+.sample-card {
+  background: #fff;
+  border-color: #f0d4d8;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel-intro blockquote {
+  background: #ffffff;
+  color: var(--text);
+  border-left-color: #c52d4b;
+  border-radius: 8px;
+}
+
+.badge {
+  background: #f0d4d8;
+  color: #c52d4b;
+  border-radius: 8px;
+}
+
+.badge-alt {
+  background: #ffffff;
+  color: #95636b;
+}
+
+.badge-muted {
+  background: #fff3f2;
+  color: #95636b;
+}
+
+.demo-form input:not([type=checkbox]),
+.demo-form select,
+.demo-form textarea {
+  background: #fff3f2;
+  color: var(--text);
+  border-color: #f0d4d8;
+  border-radius: 8px;
+}
+
+.progress-track {
+  background: #f0d4d8;
+}
+
+.progress-track span {
+  background: #c52d4b;
+}
+
+.site-footer {
+  color: #95636b;
+  border-top-color: #f0d4d8;
+}
+
+.brand{letter-spacing:-1.5px} .panel{border-top:4px solid var(--accent)} .button{border-radius:5px} .badge{border-radius:4px}
