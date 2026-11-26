@@ -123,23 +123,23 @@ nav a,
 }
 
 .button-primary {
-  color:#1b1230
+  color: #1b1230;
 }
 
 .button-secondary {
-  background:#2b2040
+  background: #2b2040;
 }
 
 .badge {
-  background:#3b2a56;
-  color:#d8c2ff
+  background: #3b2a56;
+  color: #d8c2ff;
 }
 
 .badge-alt {
-  background:#203b36;
-  color:#a8e3d1
+  background: #203b36;
+  color: #a8e3d1;
 }
 
 .panel {
-  border-top:2px solid #9b70e8
+  border-top: 2px solid #9b70e8;
 }
