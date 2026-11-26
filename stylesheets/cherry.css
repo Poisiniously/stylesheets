@@ -1,6 +1,5 @@
 @import url("./modern.css");
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
-
 :root {
   font-family: 'DM Sans',sans-serif;
   color: #3d1820;
@@ -123,4 +122,18 @@ nav a,
   border-top-color: #f0d4d8;
 }
 
-.brand{letter-spacing:-1.5px} .panel{border-top:4px solid var(--accent)} .button{border-radius:5px} .badge{border-radius:4px}
+.brand {
+  letter-spacing:-1.5px
+}
+
+.panel {
+  border-top:4px solid var(--accent)
+}
+
+.button {
+  border-radius:5px
+}
+
+.badge {
+  border-radius:4px
+}
