@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A small playground for browsing and testing reusable CSS stylesheets.">
+  <title>Stylesheet Playground</title>
+  <link id="theme-stylesheet" rel="stylesheet" href="stylesheets/modern.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#">Style<span>Sheets</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#playground">Playground</a>
+      <a href="#components">Components</a>
+      <a href="https://github.com/Poisiniously/stylesheets" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+    <label class="theme-picker">Stylesheet
+      <select id="theme-select" aria-label="Choose a stylesheet">
+        <option value="modern">Modern</option>
+        <option value="cyberpunk">Cyberpunk</option>
+        <option value="minimal">Minimal</option>
+        <option value="retro">Retro</option>
+      </select>
+    </label>
+  </header>
+
+  <main>
+    <section class="hero" id="playground">
+      <p class="eyebrow">CSS COLLECTION · LIVE PREVIEW</p>
+      <h1>One page.<br><span>Many styles.</span></h1>
+      <p class="hero-copy">Switch between the stylesheets and see how the exact same HTML elements can get a completely different look.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#components">Explore components</a>
+        <a class="button button-secondary" href="https://github.com/Poisiniously/stylesheets" target="_blank" rel="noreferrer">View source</a>
+      </div>
+      <div class="style-status" aria-live="polite"><span class="status-dot"></span> Active stylesheet: <strong id="active-theme">Modern</strong></div>
+    </section>
+
+    <section class="section" id="components">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COMPONENT LIBRARY</p><h2>Same elements, new personality.</h2></div>
+        <p>Use this page to compare typography, spacing, surfaces, controls and states.</p>
+      </div>
+
+      <div class="component-grid">
+        <article class="panel panel-intro">
+          <p class="eyebrow">01 / TYPOGRAPHY</p>
+          <h3>Headings that make a statement.</h3>
+          <p>This is regular paragraph text. It should be comfortable to read, with a clear line length and enough contrast.</p>
+          <p><a href="#form-demo">Text link example</a> · <strong>Bold text</strong> · <em>Italic text</em></p>
+          <blockquote>“Good design is as little design as possible.”</blockquote>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">02 / BUTTONS</p>
+          <h3>Actions & states</h3>
+          <div class="button-stack">
+            <button class="button button-primary" type="button">Primary action</button>
+            <button class="button button-secondary" type="button">Secondary action</button>
+            <button class="button button-quiet" type="button">Quiet action</button>
+            <button class="button button-primary" type="button" disabled>Disabled action</button>
+          </div>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">03 / SURFACES</p>
+          <h3>Cards & badges</h3>
+          <div class="sample-card">
+            <div class="sample-card-top"><span class="badge">NEW</span><span class="muted">2 min read</span></div>
+            <h4>A little card component</h4>
+            <p>Cards are useful for grouping related information into clear, reusable blocks.</p>
+            <a href="#form-demo">Read more →</a>
+          </div>
+          <div class="badge-row"><span class="badge">Design</span><span class="badge badge-alt">CSS</span><span class="badge badge-muted">Preview</span></div>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">04 / LISTS & DATA</p>
+          <h3>Organised information</h3>
+          <ul class="demo-list">
+            <li><span>Typography</span><strong>01</strong></li>
+            <li><span>Buttons</span><strong>02</strong></li>
+            <li><span>Forms</span><strong>03</strong></li>
+          </ul>
+          <div class="progress-label"><span>Stylesheet completeness</span><strong>75%</strong></div>
+          <div class="progress-track"><span></span></div>
+        </article>
+
+        <article class="panel panel-wide" id="form-demo">
+          <p class="eyebrow">05 / FORM ELEMENTS</p>
+          <h3>Inputs you can interact with</h3>
+          <form class="demo-form">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="jane@example.com">
+            <label for="choice">Choose an option</label>
+            <select id="choice" name="choice"><option>First option</option><option>Second option</option><option>Third option</option></select>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="3" placeholder="Write something..."></textarea>
+            <label class="checkbox-label"><input type="checkbox" name="updates"> Send me occasional updates</label>
+            <button class="button button-primary" type="submit">Submit example</button>
+            <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>Stylesheet Playground</span><span>Built to experiment with CSS.</span></footer>
+</body>
+</html>
