@@ -1,6 +1,5 @@
 @import url("./modern.css");
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
-
 :root {
   font-family: 'Nunito',sans-serif;
   color: #45283a;
@@ -123,4 +122,18 @@ nav a,
   border-top-color: #f2dce8;
 }
 
-h1,h2,h3,h4{font-family:'Nunito',sans-serif} .button{border-radius:999px} .badge{border-radius:999px} .panel{border-radius:24px}
+h1,h2,h3,h4 {
+  font-family:'Nunito',sans-serif
+}
+
+.button {
+  border-radius:999px
+}
+
+.badge {
+  border-radius:999px
+}
+
+.panel {
+  border-radius:24px
+}
