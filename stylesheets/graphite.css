@@ -123,24 +123,24 @@ nav a,
 }
 
 body {
-  background:linear-gradient(145deg,#17191d,#20242b);
-  color:var(--text)
+  background: linear-gradient(145deg,#17191d,#20242b);
+  color: var(--text);
 }
 
 .button-primary {
-  color:#17191d
+  color: #17191d;
 }
 
 .button-secondary {
-  background:#2a2e35
+  background: #2a2e35;
 }
 
 .badge {
-  background:#353b45;
-  color:#e6ebf2
+  background: #353b45;
+  color: #e6ebf2;
 }
 
 .badge-alt {
-  background:#303b38;
-  color:#a8d7c1
+  background: #303b38;
+  color: #a8d7c1;
 }
