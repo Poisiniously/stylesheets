@@ -7,7 +7,7 @@ const feedback = document.querySelector("#form-feedback");
 const STYLESHEET_DIRECTORY_API =
   "https://api.github.com/repos/Poisiniously/stylesheets/contents/stylesheets?ref=main";
 
-// Used only when GitHub's API cannot be reached (for example, while offline).
+// Used only if GitHub's API is unavailable, such as when the site is offline.
 const fallbackThemes = [
   "amber", "arctic", "cherry", "coffee", "cyberpunk",
   "forest", "graphite", "lavender", "minimal", "mint",
@@ -17,23 +17,24 @@ const fallbackThemes = [
 
 let themeNames = Object.create(null);
 
-function formatThemeName(filename) {
-  return filename
-    .replace(/\\.css$/i, "")
-    .replace(/[-_]+/g, " ")
-    .replace(/\\b\\w/g, (letter) => letter.toUpperCase());
+function getThemeName(filename) {
+  const slug = filename.slice(0, -4);
+  return slug
+    .split(/[-_]/)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }
 
-function populateThemeSelect(themeFiles) {
+function populateThemeSelect(filenames) {
   themeNames = Object.create(null);
   themeSelect.replaceChildren();
 
-  themeFiles
-    .filter((filename) => /^[a-z0-9_-]+\\.css$/i.test(filename))
+  filenames
+    .filter((filename) => filename.toLowerCase().endsWith(".css"))
     .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }))
     .forEach((filename) => {
-      const theme = filename.replace(/\\.css$/i, "");
-      const name = formatThemeName(filename);
+      const theme = filename.slice(0, -4);
+      const name = getThemeName(filename);
       themeNames[theme] = name;
 
       const option = document.createElement("option");
