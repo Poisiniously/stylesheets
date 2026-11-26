@@ -1,0 +1,126 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Manrope',sans-serif;
+  color: #183044;
+  background: #edf6fb;
+  --bg: #edf6fb;
+  --surface: #ffffff;
+  --text: #183044;
+  --muted: #688295;
+  --accent: #1688b8;
+  --border: #d4e7f0;
+  --radius: 22px;
+  --shadow: 0 16px 40px #164c6818;
+}
+
+body {
+  background: #edf6fb;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #d4e7f0;
+}
+
+.brand span,
+.hero h1 span {
+  color: #1688b8;
+}
+
+nav a,
+.theme-picker {
+  color: #688295;
+}
+
+.theme-picker select {
+  background: #ffffff;
+  color: #183044;
+  border: 1px solid #d4e7f0;
+  border-radius: 22px;
+}
+
+.hero {
+  background: radial-gradient(circle at 85% 15%,#c9eafa 0,transparent 42%),#edf6fb;
+}
+
+.eyebrow {
+  color: #1688b8;
+}
+
+.button-primary {
+  background: linear-gradient(135deg,#1688b8,#42b5d6);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.button-secondary {
+  background: #ffffff;
+  color: var(--text);
+  border-color: #d4e7f0;
+}
+
+.button-quiet {
+  color: var(--accent);
+}
+
+.panel,
+.sample-card {
+  background: linear-gradient(145deg,#fff,#f5fbfe);
+  border-color: #d4e7f0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel-intro blockquote {
+  background: #ffffff;
+  color: var(--text);
+  border-left-color: #1688b8;
+  border-radius: 22px;
+}
+
+.badge {
+  background: #d4e7f0;
+  color: #1688b8;
+  border-radius: 22px;
+}
+
+.badge-alt {
+  background: #ffffff;
+  color: #688295;
+}
+
+.badge-muted {
+  background: #edf6fb;
+  color: #688295;
+}
+
+.demo-form input:not([type=checkbox]),
+.demo-form select,
+.demo-form textarea {
+  background: #edf6fb;
+  color: var(--text);
+  border-color: #d4e7f0;
+  border-radius: 22px;
+}
+
+.progress-track {
+  background: #d4e7f0;
+}
+
+.progress-track span {
+  background: #1688b8;
+}
+
+.site-footer {
+  color: #688295;
+  border-top-color: #d4e7f0;
+}
+
+.site-header{backdrop-filter:blur(14px)} .panel{border-top:3px solid #8ccfe8} .button-primary{color:#fff}
