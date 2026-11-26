@@ -1,0 +1,11 @@
+@import url("./modern.css");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+:root{font-family:'Source Sans 3',sans-serif;--bg:#f7f4ee;--surface:#fffdf8;--text:#29251f;--muted:#766e62;--accent:#9a422f;--border:#ded7ca;--radius:3px;--shadow:0 8px 24px #40301b0c}
+body{background:var(--bg)}.brand,h1,h2,h3,h4{font-family:'Playfair Display',serif;letter-spacing:-.7px}
+.brand{font-size:25px}.hero{background:linear-gradient(90deg,#f0e9dc,#f7f4ee 70%)}
+h1{font-weight:500}.hero-copy{font-size:19px;max-width:620px}
+.panel,.sample-card{border-radius:3px;box-shadow:none}.panel{border-top:2px solid var(--accent)}
+.button{border-radius:2px;text-transform:uppercase;letter-spacing:1px;font-size:11px}
+.button-primary{background:#9a422f}.badge{border-radius:2px;text-transform:uppercase;letter-spacing:1px;background:#eee3d5;color:#8c3c2b}
+.demo-form input:not([type=checkbox]),.demo-form select,.demo-form textarea{border-radius:2px;background:#fffdf8}
+.site-footer{font-family:'Playfair Display',serif;font-style:italic}
