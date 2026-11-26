@@ -8,7 +8,15 @@ const themeNames = {
   modern: "Modern",
   cyberpunk: "Cyberpunk",
   minimal: "Minimal",
-  retro: "Retro"
+  retro: "Retro",
+  ocean: "Ocean",
+  forest: "Forest",
+  rose: "Rose",
+  sunset: "Sunset",
+  lavender: "Lavender",
+  mint: "Mint",
+  amber: "Amber",
+  slate: "Slate"
 };
 
 function applyTheme(theme) {
